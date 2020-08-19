@@ -2,13 +2,14 @@ import React from "react";
 import Game from "./Game";
 import './league.scss';
 
-const League = ({ league }) => {
+const League = ({league, setShowBetslip, setSelectedPrice}) => {
 
-  console.log(league);
+  const games = league.map(game =>
+    <Game game={game}
+          setShowBetslip={setShowBetslip}
+          setSelectedPrice={setSelectedPrice}/>)
 
-  const games = league.map(game => <Game game={game}/>)
   const leagueName = league[0] && league[0].league;
-
 
   return (
     <div className="league">

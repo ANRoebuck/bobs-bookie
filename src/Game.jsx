@@ -1,6 +1,6 @@
 import React from "react";
 
-const Game = ({ game }) => {
+const Game = ({ game, setShowBetslip, setSelectedPrice }) => {
 
   return (
     <div className="game">
