@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import DisplayPrices from "./DisplayPrices";
 
 function App() {
+
+  const [refreshes, setRefreshes] = useState(true);
+
+  const handleClick = () => setRefreshes(refreshes => !refreshes);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="refresh-toggle" onClick={handleClick}>
+        {`Click to enable/disable autorefresh. Autorefresh is : ${refreshes} \n\n\n`}
+      </div>
+      <DisplayPrices/>
     </div>
   );
 }
