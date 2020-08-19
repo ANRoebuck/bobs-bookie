@@ -23,7 +23,9 @@ const DisplayPrices = () => {
 
   return (
     <div>
-      { showBetslip ? <BetSlip selectedPrice={selectedPrice}/> : null}
+      { showBetslip ?
+        <BetSlip selectedPrice={selectedPrice} setShowBetslip={setShowBetslip}/>
+        : null}
       {table}
     </div>
   )
