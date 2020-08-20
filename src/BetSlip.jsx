@@ -16,7 +16,7 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
       <div className="backing">{backing}</div>
       <div className="odds">{odds}</div>
       <input type="text" />
-      <button type="button">Place Bet</button>
+      <button type="button" onClick={() => setShowBetslip(false)}>Place Bet</button>
       <div className="description">{match}</div>
       <button type="button" onClick={() => setShowBetslip(false)}>Cancel</button>
     </div>
