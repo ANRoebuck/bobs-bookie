@@ -3,7 +3,6 @@ import React from "react";
 const Game = ({ game, setShowBetslip, setSelectedPrice }) => {
 
   const handleClick = (team, price) => {
-    console.log('click');
     setShowBetslip(true);
     setSelectedPrice({
       game,
@@ -21,7 +20,7 @@ const Game = ({ game, setShowBetslip, setSelectedPrice }) => {
         <td onClick={() => handleClick(game.teamA, game.teamAodds)} className="score">
           {game.teamAscore}
         </td>
-        <td onClick={() => handleClick(game.teamA, game.teamAodds)} className="price" data-qb-uui={game.teamAelementId}>
+        <td onClick={() => handleClick(game.teamA, game.teamAodds)} className="price" data-qb-uuid={game.teamAelementId}>
           {game.teamAodds}
         </td>
       </tr>
