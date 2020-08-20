@@ -3,7 +3,7 @@ import './App.css';
 import DisplayPrices from "./DisplayPrices";
 
 // USE BOOLEAN TO CONFIGURE AUTOREFRESH OPTION
-const includeAutoRefresh = false;
+const includeAutoRefresh = true;
 
 
 
@@ -17,7 +17,7 @@ function App() {
         if (refreshes) {
           let timeout = setInterval(() => {
             refreshes && window.location.reload(true)
-          }, 2000);
+          }, 5000);
           setTimeoutId(timeout);
         } else {
           clearInterval(timeoutId);
