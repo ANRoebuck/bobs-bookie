@@ -11,7 +11,7 @@ function App() {
       if (refreshes) {
         let timeout = setInterval(() => {
           refreshes && window.location.reload(true)
-        }, 5000);
+        }, 750);
         setTimeoutId(timeout);
       } else {
         clearInterval(timeoutId);

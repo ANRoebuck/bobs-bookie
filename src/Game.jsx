@@ -3,12 +3,12 @@ import React from "react";
 const Game = ({ game, setShowBetslip, setSelectedPrice }) => {
 
   const handleClick = (team, price) => {
-    setShowBetslip(true);
     setSelectedPrice({
       game,
       team,
       price,
     })
+    setTimeout(() => setShowBetslip(true), 500);
   }
 
   return (
