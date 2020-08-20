@@ -15,35 +15,35 @@ const Game = ({ game, setShowBetslip, setSelectedPrice }) => {
   return (
     <div className="game">
       <tr className="tableRow">
-        <th onClick={() => handleClick(game.teamA, game.teamAodds)} className="teamName">
+        <td onClick={() => handleClick(game.teamA, game.teamAodds)} className="teamName">
           {game.teamA}
-        </th>
-        <th onClick={() => handleClick(game.teamA, game.teamAodds)} className="score">
+        </td>
+        <td onClick={() => handleClick(game.teamA, game.teamAodds)} className="score">
           {game.teamAscore}
-        </th>
-        <th onClick={() => handleClick(game.teamA, game.teamAodds)} className="price">
+        </td>
+        <td onClick={() => handleClick(game.teamA, game.teamAodds)} className="price" data-qb-uui={game.teamAelementId}>
           {game.teamAodds}
-        </th>
+        </td>
       </tr>
       <tr className="tableRow">
-        <th onClick={() => handleClick(game.teamB, game.teamBodds)} className="teamName">
+        <td onClick={() => handleClick(game.teamB, game.teamBodds)} className="teamName">
           {game.teamB}
-        </th>
-        <th onClick={() => handleClick(game.teamB, game.teamBodds)} className="score">
+        </td>
+        <td onClick={() => handleClick(game.teamB, game.teamBodds)} className="score">
           {game.teamBscore}
-        </th>
-        <th onClick={() => handleClick(game.teamB, game.teamBodds)} className="price">
+        </td>
+        <td onClick={() => handleClick(game.teamB, game.teamBodds)} className="price">
           {game.teamBodds}
-        </th>
+        </td>
       </tr>
       <tr className="tableRow">
-        <th onClick={() => handleClick('Draw', game.drawOdds)} className="teamName">
+        <td onClick={() => handleClick('Draw', game.drawOdds)} className="teamName">
           Draw
-        </th>
-        <th className="score"/>
-        <th onClick={() => handleClick('Draw', game.drawOdds)} className="price">
+        </td>
+        <td className="score"/>
+        <td onClick={() => handleClick('Draw', game.drawOdds)} className="price">
           {game.drawOdds}
-        </th>
+        </td>
       </tr>
     </div>
   )

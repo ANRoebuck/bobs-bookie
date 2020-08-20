@@ -4,6 +4,7 @@ export const getSomeRandomPrices = () => {
   for (let i = 0; i < priceCount; i++) {
     prices.push(aRandomPrice());
   }
+  prices[0].teamAelementId = 'ae1d54c6-e2d6-11ea-87d0-0242ac130003';
   return prices;
 }
 
