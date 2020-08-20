@@ -7,19 +7,19 @@ function App() {
   const [refreshes, setRefreshes] = useState(true);
   const [timeoutId, setTimeoutId] = useState(0);
 
-  useEffect(() => {
-      if (refreshes) {
-        let timeout = setInterval(() => {
-          refreshes && window.location.reload(true)
-        }, 2000);
-        setTimeoutId(timeout);
-      } else {
-        clearInterval(timeoutId);
-        setTimeoutId(0);
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [refreshes]);
+  // useEffect(() => {
+  //     if (refreshes) {
+  //       let timeout = setInterval(() => {
+  //         refreshes && window.location.reload(true)
+  //       }, 2000);
+  //       setTimeoutId(timeout);
+  //     } else {
+  //       clearInterval(timeoutId);
+  //       setTimeoutId(0);
+  //     }
+  //   },
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   [refreshes]);
   // NB: do NOT include timeoutId as a dependency as this will create a loop. Ignore lint.
 
   const handleClick = () => setRefreshes(refreshes => !refreshes);
