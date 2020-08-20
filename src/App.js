@@ -9,12 +9,12 @@ function App() {
 
   useEffect(() => {
       if (refreshes) {
-        let timeout = setTimeout(() => {
+        let timeout = setInterval(() => {
           refreshes && window.location.reload(true)
         }, 5000);
         setTimeoutId(timeout);
       } else {
-        clearTimeout(timeoutId);
+        clearInterval(timeoutId);
         setTimeoutId(0);
       }
     },
