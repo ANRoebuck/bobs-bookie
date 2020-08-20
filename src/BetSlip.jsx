@@ -15,7 +15,10 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
 
   const handleChange = (e) => setStake(e.target.value);
 
-  const mockPlaceBet = () => setTimeout(() => setShowBetslip(false), 1000);
+  const mockPlaceBet = () => {
+    alert("bet placed");
+    setTimeout(() => setShowBetslip(false), 1000);
+  }
 
   return (
     <div className="bet-slip">
@@ -34,7 +37,13 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
         Place Bet
       </button>
       <div className="description">{match}</div>
-      <button type="button" onClick={() => setShowBetslip(false)}>Cancel</button>
+      <button
+        type="button"
+        onClick={() => setShowBetslip(false)}
+        data-qb-uuid="811d25a0-e2ef-11ea-87d0-0242ac130003"
+      >
+        Cancel
+      </button>
     </div>
   )
 
