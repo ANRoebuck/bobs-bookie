@@ -4,7 +4,11 @@ export const getSomeRandomPrices = () => {
   for (let i = 0; i < priceCount; i++) {
     prices.push(aRandomPrice());
   }
+
+  // fix the first price
   prices[0].teamAelementId = 'ae1d54c6-e2d6-11ea-87d0-0242ac130003';
+  prices[0].league = 'Flim League';
+
   return prices;
 }
 
