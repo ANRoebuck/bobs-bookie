@@ -34,7 +34,7 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
         data-qb-uuid="ff126b42-e2ee-11ea-87d0-0242ac130003"/>
       <button
         type="button"
-        onClick={() => mockPlaceBet()}
+        onClick={(e) => mockPlaceBet(e)}
         data-qb-uuid="2be4cc5a-e2ef-11ea-87d0-0242ac130003"
       >
         Place Bet
@@ -42,7 +42,7 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
       <button
         className="button-with-animation"
         type="button"
-        onClick={() => mockPlaceBet()}
+        onClick={(e) => mockPlaceBet(e)}
         data-qb-uuid="4cffc416-ec41-11ea-adc1-0242ac120002"
       >
         Place Bet With Animation
