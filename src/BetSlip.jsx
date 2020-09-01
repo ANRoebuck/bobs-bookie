@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './betslip.scss';
 
 const BetSlip = ({selectedPrice, setShowBetslip}) => {
 
@@ -36,6 +37,14 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
         data-qb-uuid="2be4cc5a-e2ef-11ea-87d0-0242ac130003"
       >
         Place Bet
+      </button>
+      <button
+        className="button-with-animation"
+        type="button"
+        onClick={() => mockPlaceBet()}
+        data-qb-uuid="4cffc416-ec41-11ea-adc1-0242ac120002"
+      >
+        Place Bet With Animation
       </button>
       <div className="description">{match}</div>
       <button
