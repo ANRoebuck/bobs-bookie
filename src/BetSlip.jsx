@@ -18,7 +18,6 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
 
   const mockPlaceBet = (e) => {
     e.preventDefault();
-    window.location.reload(true);
     alert("bet placed");
     setShowBetslip(false);
   }
