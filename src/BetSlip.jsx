@@ -18,8 +18,9 @@ const BetSlip = ({selectedPrice, setShowBetslip}) => {
 
   const mockPlaceBet = (e) => {
     e.preventDefault();
-    alert("bet placed");
-    setShowBetslip(false);
+    // alert("bet placed");
+    // setShowBetslip(false);
+    setTimeout(() => setShowBetslip(false), 500);
   }
 
   return (
