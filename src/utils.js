@@ -1,12 +1,12 @@
 
 
 export const rawJson = {
+  price: "0.54",
   competition: "UZBEKISTAN CUP",
   teams: [
     "FK Andijon",
     "Nasaf Qarshi"
   ],
-  price: "0.54",
   betType: "HDP : 0.5 @ 0-0",
 }
 

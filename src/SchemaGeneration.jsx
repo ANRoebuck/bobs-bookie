@@ -4,7 +4,7 @@ import { prettyJson, rawJson } from "./utils";
 
 const SchemaGeneration = () => {
 
-  const [inputJson, setInputJson] = useState(JSON.stringify(rawJson));
+  const [inputJson, setInputJson] = useState(prettyJson(rawJson));
   const [fudgedJson, setFudgedJson] = useState({});
   const [usingKey, setUsingKey] = useState('');
   const [addingKey, setAddingKey] = useState('');

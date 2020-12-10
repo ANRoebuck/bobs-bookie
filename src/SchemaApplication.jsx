@@ -4,7 +4,7 @@ import { isValidJson, prettyJson, rawJson } from "./utils";
 
 const SchemaApplication = () => {
 
-  const [inputJson, setInputJson] = useState(JSON.stringify(rawJson));
+  const [inputJson, setInputJson] = useState(prettyJson(rawJson));
   const [schema, setSchema] = useState('');
   const [outputJson, setOutputJson] = useState({});
 
@@ -16,6 +16,7 @@ const SchemaApplication = () => {
 
     let output = {};
 
+    // eslint-disable-next-line no-eval
     Object.entries(evaluator).forEach(([key, f]) => output[key] = eval(f));
 
     setOutputJson(output);
