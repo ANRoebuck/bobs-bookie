@@ -4,6 +4,7 @@ import { prettyJson, rawJson } from "./utils";
 
 const SchemaGeneration = () => {
 
+  const [inputJson, setInputJson] = useState(JSON.stringify(rawJson));
   const [fudgedJson, setFudgedJson] = useState({});
   const [usingKey, setUsingKey] = useState('');
   const [addingKey, setAddingKey] = useState('');
@@ -107,9 +108,11 @@ const SchemaGeneration = () => {
       <div className="raw-json-container json-container">
         <label>
           Raw JSON:
-          <div className="raw-json json">
-            {prettyJson(rawJson)}
-          </div>
+          <textarea className="raw-json json"
+                    onChange={(e) => setInputJson(e.target.value)}
+          >
+          {inputJson}
+        </textarea>
         </label>
       </div>
 
